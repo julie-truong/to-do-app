@@ -1,22 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { TextEditableComponent } from './components/todos/text-editable.directive';
 
 import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
 
-// Everything declared here 
 
 @NgModule({
+  // List of Angular things relvant to module
   declarations: [
     AppComponent,
-    TodosComponent
+    TodosComponent, 
+    TextEditableComponent
   ],
+  // list of other NgModules needed for the module
   imports: [
     BrowserModule, 
-    FormsModule
+    FormsModule, 
   ],
   providers: [],
+  // Only relevant to root NgModule
   bootstrap: [AppComponent]
 })
 export class AppModule { }

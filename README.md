@@ -1,6 +1,6 @@
 # ToDoApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2 and was based off a [tutorial](https://youtu.be/i7KaVFOXNUQ).
 
 ## Development server
 

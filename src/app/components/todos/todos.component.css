@@ -5,10 +5,6 @@
 	border-bottom: 1px solid #DDD;
 }
 
-.todo:nth-child(even) {
-	background-color: #EEE;
-}
-
 .todo:last-of-type {
 	border-bottom: 0;
 }
@@ -21,8 +17,24 @@
 	flex: 1 1 100%;
 }
 
+.todo .delete {
+	padding: 3px;
+
+	/* Change cursor on hover */
+	cursor: pointer;
+}
+
+.todo.done {
+	background-color: #EEE;
+}
+
+.todo.done .id {
+	color: dimgray;
+}
+
 .todo.done .content {
 	text-decoration: line-through;
+	color: dimgray;
 }
 
 .todo-input {
@@ -38,6 +50,7 @@
 }
 
 .todo-submit {
+	align-items: center;
 	display: block;
 	width: 100%;
 	max-width: 200px;
@@ -53,4 +66,29 @@
 	padding: 10px 15px;
 	font-size: 18px;
 	font-weight: 700;
+
+	/* Change cursor on hover */
+	cursor: pointer;
+}
+
+.todo-clear {
+	align-items: center;
+	display: block;
+	width: 100%;
+	max-width: 200px;
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+
+	background-color: #808080;
+	color: #FFF;
+	margin: 15px auto;
+
+	padding: 10px 15px;
+	font-size: 18px;
+	font-weight: 700;
+
+	/* Change cursor on hover */
+	cursor: pointer;
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from './../../models/Todo';
 
+
 @Component({
   // Selector is how we use component in other components
   selector: 'app-todos',
@@ -8,8 +9,8 @@ import { Todo } from './../../models/Todo';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
-
   // Empty array of todos following certain model
+  title: string;
   todos:Todo[];
 
   inputTodo:string = "";
@@ -20,20 +21,19 @@ export class TodosComponent implements OnInit {
   ngOnInit(): void {
     this.todos = [ 
       {
-        content: 'First todo', 
-        completed: false
+        content: 'Completed todo', 
+        completed: true
       }, 
       {
-        content: 'Second todo', 
-        completed: true
+        content: 'Add a todo', 
+        completed: false
       }
     ]
   }
-
+  
   toggleDone (id:number) {
     this.todos.map((v, i) => {
       if (i == id) v.completed = !v.completed;
-
       return v;
     }) 
   }
@@ -54,6 +54,11 @@ export class TodosComponent implements OnInit {
       // Clear input after adding new todo
       this.inputTodo = "";
     }
+    
+  }
+
+  clearAll() {
+    this.todos = this.todos.filter((v, i) => false);
   }
 
 }

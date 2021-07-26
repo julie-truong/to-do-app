@@ -8,11 +8,24 @@
             [(ngModel)]="inputTodo"
         />
         <input type="submit" value="Add Todo" class="todo-submit">
+        
         <!-- ngModel - two-way data binding assigned to variable or data attribute in component -->
     </form>
     <div *ngFor="let todo of todos; let i = index;" class="todo {{ (todo.completed ? 'done' : '') }}">
-        <div class="id">{{ i }}</div>
-        <div class="content" (click)="toggleDone(i)">{{ todo.content }}</div>
+
+        <!-- <input [(ngModel)]="checkboxValue" (change)="newFunction()" type="checkbox" name="onoffswitch" class="checkbox" checked> -->
+        <input type="checkbox" (change)="toggleDone(i)" [ngModel]="todo.completed" />
+        <div class="id">{{ i }}</div> 
+        <!-- <div class="content" (click)="toggleDone(i)">{{ todo.content }}</div> -->
+        <!-- <div class="content">{{ todo.content }}</div> -->
+
+        <div text-editable 
+            class="content"
+            [(ngModel)]="todo.content">{{ todo.content }}
+        </div>
+
         <button class="delete" (click)="deleteTodo(i)">Delete</button>
     </div>
 </div>
+
+<input type="submit" (click)="clearAll()" value="Clear Todos" class="todo-clear">
