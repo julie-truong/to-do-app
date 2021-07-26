@@ -57,8 +57,8 @@ export class TodosComponent implements OnInit {
     
   }
 
-  clearAll() {
-    this.todos = this.todos.filter((v, i) => false);
+  clearCompleted() {
+    this.todos = this.todos.filter((v, i) => v.completed==false);
   }
 
 }
