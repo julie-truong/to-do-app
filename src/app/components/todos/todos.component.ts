@@ -27,6 +27,10 @@ export class TodosComponent implements OnInit {
       {
         content: 'Add a todo', 
         completed: false
+      },
+      {
+        content: 'Completed todo', 
+        completed: true
       }
     ]
   }

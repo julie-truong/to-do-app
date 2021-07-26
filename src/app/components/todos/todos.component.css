@@ -71,24 +71,6 @@
 	cursor: pointer;
 }
 
-.todo-clear {
-	align-items: center;
-	display: block;
-	width: 100%;
-	max-width: 200px;
-	appearance: none;
-	border: none;
-	outline: none;
-	background: none;
-
+.todo-submit.clear {
 	background-color: #808080;
-	color: #FFF;
-	margin: 15px auto;
-
-	padding: 10px 15px;
-	font-size: 18px;
-	font-weight: 700;
-
-	/* Change cursor on hover */
-	cursor: pointer;
 }
